@@ -1,0 +1,23 @@
+{
+	"name": "Backbone.LinkedCollection",
+	"version": "0.0.1",
+
+	"description": "Backbone plugin to make Backbone.Collection smarter. Consumes Link fields in the HTTP Response header to enable Web Linking between partial list resources.",
+	"homepage": "https://hongymagic.github.com/Backbone.LinkedCollection",
+	"author": "David Hong <davidhong.code@gmail.com>",
+	"keywords": ["backbone", "backbone.js", "RFC5988", "collection"],
+	"repository": "git://github.com/hongymagic/Backbone.LinkedCollection",
+
+	"bugs": {
+		"mail": "davidhong.code@gmail.com",
+		"url": "https://github.com/hongymagic/Backbone.LinkedCollection/issues"
+	},
+
+	"main": "index",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/hongymagic/Backbone.LinkedCollection/LICENSE"
+		}
+	]
+}
