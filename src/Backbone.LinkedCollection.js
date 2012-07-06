@@ -1,21 +1,21 @@
 /* vim: set noexpandtab ts=4 sw=4 ai si: */
 
-//
-// Backbone.LinkedCollection
-//
-// A smarter way to consume list resources over HTTP. Call it Hypermedia, REST,
-// whatever. There are other problems that we may wish to solve with the
-// current implementation of LinkedCollection:
-//
-// 1. Jumping between specific pages;
-// 2. Web Linking works, however `per_page` paramter must be implemented;
-// 3. Call to `fetch` is required to retreive Link field, which means bootstrapping is a problem; and
-// 4. `RFC5988-parser.js` which is used to parse Link field is too big. May have to move off PEG.js version.
-//
-// @depends on parser.js which was generated via PEG.js to parse Link-field in the HTTP response header.
-//
-
+/**
+ * Properties:
+ *
+ * - link: contains object for each link type
+ *
+ * Methods provided by LinkedCollection
+ *
+ * - jump
+ * - first
+ * - prev
+ * - next
+ * - last
+ */
 Backbone.LinkedCollection = (function (parser) {
+
+// No need to trash our collection prototype with yet another property.
 
 	var find = function (link, type) {
 		return _.find(link || [], function (value) {
