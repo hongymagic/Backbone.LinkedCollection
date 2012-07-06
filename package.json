@@ -19,5 +19,9 @@
 			"type": "MIT",
 			"url": "https://github.com/hongymagic/Backbone.LinkedCollection/LICENSE"
 		}
-	]
+	],
+
+	"devDependencies": {
+		"grunt-contrib": "*"
+	}
 }
