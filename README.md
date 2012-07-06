@@ -49,16 +49,60 @@ named Backbone.LinkedCollection.
 In Backbone.LinkedCollection, there are 4 new methods:
 
 ```javascript
-var gists = new Backbone.LinkedCollection();
+var gists = new Backbone.LinkedCollection({
+	url: 'https://api.github.com/gists/public',
+	model: Demo.Models.Gist
+});
+
+// Get public gists
+gists.fetch();
 
 // All of the methods below have the same paramter signature as `fetch`
+
+// Go to the first page
 gists.first();
+
+// Get the previous set
 gists.prev();
+
+// Get the next set
 gists.next();
+
+// Go to the last page
 gists.last();
 ```
 
 A simple demo is here: http://jsfiddle.net/davidhong/gAyAx/
+
+## Issues & Resolutions
+
+### It is not a paging replacement
+
+Whilst HTTP Link field can contain more links than the 4 mentioned above,
+it is not practical to include all pages. Thus, this should not be a replacement
+for paged lists. Instead this could be useful for sequential lists such as
+Twitter streams.
+
+### PEG.js based HTTP Link field parser
+
+Is too big. A simple `page` and `per_page` implementation would be more ideal
+if you're looking for something small. One main advantage of HTTP Link field is
+that resource end-point is absolute as it is given to us by the server.
+
+### No support for bootstrapping of models
+
+Since this is based HTTP Link field, at least one response is required to find
+out about linked resources. Ideally, a collection should have an option to be
+bootstrapped instead of fetching on start-up.
+
+### Many more
+
+As mentioned earlier, this is an experiement.
+
+## Further notes
+
+I think this idea could be useful on Backbone.Model as well. HTTP Link field is
+not limited to list resources, but can extend to cater for different resources.
 
 ## TODO
 
