@@ -1,37 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>Backbone.LinkedCollection by hongymagic</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Backbone.LinkedCollection by hongymagic</title>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Backbone.LinkedCollection</h1>
+        <p class="header">Backbone.js plugin to make Backbone.Collection smarter. Consumes Link field (RFC 5988) in the HTTP Response header to enable Web Linking between partial list resources.</p>
 
-        <header>
-          <h1>Backbone.LinkedCollection</h1>
-          <h2>Backbone.js plugin to make Backbone.Collection smarter. Consumes Link field (RFC 5988) in the HTTP Response header to enable Web Linking between partial list resources.</h2>
-        </header>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/hongymagic/Backbone.LinkedCollection/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/hongymagic/Backbone.LinkedCollection/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/hongymagic/Backbone.LinkedCollection">View On GitHub</a></li>
+        </ul>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/hongymagic/Backbone.LinkedCollection/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/hongymagic/Backbone.LinkedCollection/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/hongymagic/Backbone.LinkedCollection" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/hongymagic">hongymagic</a></p>
 
-        <hr>
 
-        <section id="main_content">
-          <h1>Backbone.LinkedCollection</h1>
+      </header>
+      <section>
+        <h1>Backbone.LinkedCollection</h1>
 
 <p>Backbone.js plugin to make Backbone.Collection smarter. Consumes Link field
 (<a href="http://tools.ietf.org/html/rfc5988#page-6">RFC 5988</a>) in the HTTP Response
@@ -84,8 +83,7 @@ named Backbone.LinkedCollection.</p>
 
 <p>In Backbone.LinkedCollection, there are 4 new methods:</p>
 
-<div class="highlight">
-<pre><span class="kd">var</span> <span class="nx">gists</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">LinkedCollection</span><span class="p">({</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">gists</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">LinkedCollection</span><span class="p">({</span>
     <span class="nx">url</span><span class="o">:</span> <span class="s1">'https://api.github.com/gists/public'</span><span class="p">,</span>
     <span class="nx">model</span><span class="o">:</span> <span class="nx">Demo</span><span class="p">.</span><span class="nx">Models</span><span class="p">.</span><span class="nx">Gist</span>
 <span class="p">});</span>
@@ -106,11 +104,9 @@ named Backbone.LinkedCollection.</p>
 
 <span class="c1">// Go to the last page</span>
 <span class="nx">gists</span><span class="p">.</span><span class="nx">last</span><span class="p">();</span>
-</pre>
-</div>
+</pre></div>
 
-
-<p>A simple demo is here: <a href="http://jsfiddle.net/davidhong/gAyAx/show/">http://jsfiddle.net/davidhong/gAyAx/show/</a></p>
+<p>A simple demo is here: <a href="http://jsfiddle.net/davidhong/gAyAx/">http://jsfiddle.net/davidhong/gAyAx/</a> (CoffeeScript: <a href="http://jsfiddle.net/davidhong/m2jS2/">http://jsfiddle.net/davidhong/m2jS2/</a>)</p>
 
 <h2>Issues &amp; Resolutions</h2>
 
@@ -145,20 +141,19 @@ not limited to list resources, but can extend to cater for different resources.<
 <h2>TODO</h2>
 
 <ol>
-<li>Migrate the sources from jsbin/jsfiddle/gist/wherever</li>
+<li><del>Migrate the sources from jsbin/jsfiddle/gist/wherever</del></li>
 <li>Write some tests</li>
-<li>Fix code</li>
-<li>Tasks</li>
-</ol>
-        </section>
+<li><del>Fix code</del></li>
+<li><del>Tasks</del></li>
+</ol><h2>Tags</h2>
 
-        <footer>
-          Backbone.LinkedCollection is maintained by <a href="https://github.com/hongymagic">hongymagic</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<p>Backbone.js, LinkedCollection, Linked, Collection, TFC5988</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
