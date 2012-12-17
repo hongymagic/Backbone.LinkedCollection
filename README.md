@@ -72,7 +72,7 @@ gists.next();
 gists.last();
 ```
 
-A simple demo is here: http://jsfiddle.net/davidhong/gAyAx/
+A simple demo is here: http://jsfiddle.net/davidhong/gAyAx/ (CoffeeScript: http://jsfiddle.net/davidhong/m2jS2/)
 
 ## Issues & Resolutions
 
