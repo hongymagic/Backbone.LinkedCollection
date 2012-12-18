@@ -25,6 +25,10 @@ Backbone.LinkedCollection = (function (parser) {
 
 // Unfortunately, the way original `fetch` is written, we need to completely
 // replace the method.
+//
+// As of Backbone 0.9.9 `parse` function no longer receives xhr object as its
+// function is to parse the received data not transmission. Because of this
+// change, we will need to replace the `fetch` function.
 
 		fetch: function (options) {
 			options = options ? _.clone(options) : {};
@@ -40,21 +44,6 @@ Backbone.LinkedCollection = (function (parser) {
 			};
 			return this.sync('read', this, options);
 		},
-
-//
-// As of Backbone 0.9.9 `parse` function no longer receives xhr object as its
-// function is to parse the received data not transmission. Because of this
-// change, we will need to replace the `fetch` function.
-//
-//		parse: function (response, xhr) {
-//			var link = xhr.getResponseHeader('Link');
-//
-//			if (link) {
-//				this.link = parser.parse(link);
-//			}
-//
-//			return Backbone.Collection.prototype.parse.apply(this, arguments);
-//		},
 
 // Jump to a given related link as specified by the `rel` attribute.
 
