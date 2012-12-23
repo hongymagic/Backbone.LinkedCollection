@@ -106,7 +106,6 @@ not limited to list resources, but can extend to cater for different resources.
 
 ## TODO
 
-1. Migrate the sources from jsbin/jsfiddle/gist/wherever
+1. <del>Migrate the sources from jsbin/jsfiddle/gist/wherever</del>
 2. Write some tests
-3. Fix code
-4. Tasks
+3. <del>Fix code</del>
